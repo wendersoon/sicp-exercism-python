@@ -1,6 +1,3 @@
-def square(x):
-    return x * x
-
 def average(x, y):
     return (x + y) / 2
 
