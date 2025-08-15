@@ -15,7 +15,7 @@ def fast_mul(a, b):
     if b == 0:
         return 0
     elif b % 2 == 0:
-        return mul(double(a), halve(b))
+        return fast_mul(double(a), halve(b))
     else:
         return a + mul(a, b - 1)
     
