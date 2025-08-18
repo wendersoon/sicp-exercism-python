@@ -34,7 +34,6 @@ def assert_result(test_name, actual, expected):
     print(f"{status}: {test_name}")
 
 
-# --- Testes equivalentes aos do Scheme ---
 assert_result("   2 is prime",      miller_rabin_prime(2, 10), True)
 assert_result("1009 is prime",      miller_rabin_prime(1009, 10), True)
 assert_result("   4 is not prime",  miller_rabin_prime(4, 10), False)
