@@ -34,17 +34,17 @@ print(factorial(10))
 
 print(15*"-")
 ########################### B ##############################
-def accumulatte2(combiner, term, a, next, b):
+def accumulatte2(combiner, null_value, term, a, next, b):
     def iter(a, result):
         if a > b:
             return result
         return iter(next(a), combiner(result, term(a)))
 
-    return iter(next(a), term(a))
+    return iter(next(a), null_value)
 
 ### sum
 def sum2(term, a, next, b):
-    return accumulatte2(lambda x, y: x + y, term, a, next, b)
+    return accumulatte2(lambda x, y: x + y, 0, term, a, next, b)
 
 def sum_cubes2(a, b):
     return sum2(cube, a, inc, b)
@@ -53,7 +53,7 @@ print(sum_cubes2(1, 10))
 
 ### product
 def product2(term, a, next, b):
-    return accumulatte2(lambda x, y: x * y, term, a, next, b)
+    return accumulatte2(lambda x, y: x * y, 1, term, a, next, b)
 
 def factorial2(n):
     return product2(identify, 1, inc, n)
