@@ -1,0 +1,1 @@
+# Solution https://www.timwoerner.de/posts/sicp/exercises/2/15/
