@@ -5,7 +5,6 @@ def accumulate(op, initial, sequence):
 
 
 def accumulate_n(op, initial, sequences):
-    # base: se as subsequências acabaram (primeira vazia), retornar lista vazia
     if not sequences or not sequences[0]:
         return []
     first_column = [seq[0] for seq in sequences]
